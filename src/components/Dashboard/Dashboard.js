@@ -1,11 +1,11 @@
 import React from "react";
-import Sidebar from "../Shared/SideBar";
+// import Sidebar from "../Shared/Sidebar";
 
 const Dashboard = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <Sidebar/>
+      {/* <Sidebar/> */}
 
       {/* Main Content */}
       <main className="flex-1 p-4 md:p-6">
