@@ -1,38 +1,11 @@
 import React from "react";
+import Sidebar from "../Shared/SideBar";
 
 const Dashboard = () => {
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
-      <aside className="w-64 bg-white shadow-lg hidden md:block">
-        <div className="p-4">
-          <h2 className="text-xl font-bold mb-4">Dashboard</h2>
-          <nav>
-            <ul>
-              <li className="mb-2">
-                <a href="#" className="text-blue-500 hover:underline">
-                  Overview
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="text-blue-500 hover:underline">
-                  Reports
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="#" className="text-blue-500 hover:underline">
-                  Analytics
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-blue-500 hover:underline">
-                  Settings
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </aside>
+      <Sidebar/>
 
       {/* Main Content */}
       <main className="flex-1 p-4 md:p-6">
