@@ -23,8 +23,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="card w-full max-w-sm shadow-2xl bg-white p-5">
+    <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4 sm:px-6 lg:px-8">
+      <div className="card w-full max-w-md shadow-2xl bg-white p-5 sm:p-6 lg:p-8">
         <h2 className="text-center text-2xl font-bold mb-4">Sign Up</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-control w-full mb-4">
@@ -89,7 +89,7 @@ const Signup = () => {
             </button>
           </div>
         </form>
-        <p className="text-center mt-4">
+        <p className="text-center mt-4 text-sm sm:text-base">
           Already have an account?{" "}
           <a href="/" className="text-blue-500">
             Login
