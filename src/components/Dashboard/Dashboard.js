@@ -1,5 +1,6 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { FaChartLine, FaFileAlt, FaUsers, FaLightbulb, FaCog, FaHome } from "react-icons/fa";
+// import { FaChartLine, FaFileAlt, FaUsers, FaLightbulb, FaCog, FaHome } from "react-icons/fa";
 
 const Dashboard = () => {
   return (
