@@ -51,7 +51,7 @@ This project is built with **React** for the frontend and integrates with variou
 
    ```bash
    git clone https://github.com/ottojoash/ai-marketing-system.git
-   cd dashboard-analytics
+   cd ai-analytics-system
    ```
 
 2. **Install dependencies**:
