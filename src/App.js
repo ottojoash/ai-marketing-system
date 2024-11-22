@@ -8,6 +8,7 @@ import Analytics from "./components/Analytics/Analytics";
 import CompetitorAnalytics from "./components/CompetitorAnalysis/CompetitorAnalysis";
 import StrategyBuilder from "./components/StrategyBuilder/StrategyBuilder";
 import Settings from "./pages/Settings";
+import Reports from "./components/Reports/Reports";
 
 const App = () => (
   <Router>
@@ -23,6 +24,7 @@ const App = () => (
           <Layout>
             <Routes>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/reports" element={<Reports/>}/>
               <Route path="/analytics" element={<Analytics />} />
               <Route path="/competitor-analytics" element={<CompetitorAnalytics />} />
               <Route path="/strategy-builder" element={<StrategyBuilder />} />
