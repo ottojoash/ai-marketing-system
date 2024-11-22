@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 
 const Sidebar = () => (
-  <aside className="w-64 bg-gray-50 border-r border-gray-200 hidden md:block">
+  <aside className="fixed top-0 left-0 h-full w-64 bg-gray-50 border-r border-gray-200 hidden md:block">
     <div className="p-6">
       <h2 className="text-xl font-bold mb-6 text-gray-700">Dashboard</h2>
       <nav>
