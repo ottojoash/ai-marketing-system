@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { getUser, updateUser } from "../utils/api"; // Import API functions
 
 const Settings = () => {
   const [activeTab, setActiveTab] = useState("profile");
@@ -7,7 +8,7 @@ const Settings = () => {
     twitter: "",
     instagram: "",
     linkedin: "",
-    youtube:"",
+    youtube: "",
   });
 
   const [subscription, setSubscription] = useState({
@@ -15,10 +16,43 @@ const Settings = () => {
     renewalDate: "2024-12-01",
   });
 
+  const [userProfile, setUserProfile] = useState({
+    fullName: "",
+    email: "",
+    password: "",
+    profilePicture: "",
+  });
+
   const handleTabClick = (tab) => setActiveTab(tab);
 
   const handleApiKeyChange = (platform, value) => {
     setApiKeys({ ...apiKeys, [platform]: value });
+  };
+
+  const fetchUserProfile = async () => {
+    try {
+      const userData = await getUser(); // Fetch user data from the backend
+      setUserProfile(userData);
+    } catch (error) {
+      console.error("Error fetching user profile:", error);
+    }
+  };
+
+  useEffect(() => {
+    if (activeTab === "profile") {
+      fetchUserProfile(); // Fetch profile data when the Profile tab is active
+    }
+  }, [activeTab]);
+
+  const handleProfileUpdate = async (updatedProfile) => {
+    try {
+      const response = await updateUser(updatedProfile); // Update user data in the backend
+      alert("Profile updated successfully!");
+      setUserProfile(response); // Update the state with the new profile data
+    } catch (error) {
+      console.error("Error updating profile:", error);
+      alert("Failed to update profile. Please try again.");
+    }
   };
 
   return (
@@ -57,44 +91,98 @@ const Settings = () => {
 
         {/* Tab Content */}
         <div className="p-6">
-          {activeTab === "profile" && <ProfileTab />}
-          {activeTab === "api-keys" && <ApiKeysTab apiKeys={apiKeys} onChange={handleApiKeyChange} />}
-          {activeTab === "subscription" && <SubscriptionTab subscription={subscription} />}
+          {activeTab === "profile" && (
+            <ProfileTab
+              userProfile={userProfile}
+              onUpdateProfile={handleProfileUpdate}
+            />
+          )}
+          {activeTab === "api-keys" && (
+            <ApiKeysTab apiKeys={apiKeys} onChange={handleApiKeyChange} />
+          )}
+          {activeTab === "subscription" && (
+            <SubscriptionTab subscription={subscription} />
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-const ProfileTab = () => (
-  <form className="space-y-4">
-    <div>
-      <label className="block text-sm font-medium text-gray-700">Full Name</label>
-      <input type="text" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
-    </div>
-    <div>
-      <label className="block text-sm font-medium text-gray-700">Email</label>
-      <input type="email" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
-    </div>
-    <div>
-      <label className="block text-sm font-medium text-gray-700">Password</label>
-      <input type="password" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
-    </div>
-    <div>
-      <label className="block text-sm font-medium text-gray-700">Profile Picture</label>
-      <input type="file" className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" />
-    </div>
-    <button type="submit" className="btn btn-primary">
-      Save Changes
-    </button>
-  </form>
-);
+const ProfileTab = ({ userProfile, onUpdateProfile }) => {
+  const [profileData, setProfileData] = useState(userProfile);
+
+  useEffect(() => {
+    setProfileData(userProfile); // Update local state when userProfile changes
+  }, [userProfile]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setProfileData({ ...profileData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onUpdateProfile(profileData); // Call the parent function to update the profile
+  };
+
+  return (
+    <form className="space-y-4" onSubmit={handleSubmit}>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Full Name</label>
+        <input
+          type="text"
+          name="fullName"
+          value={profileData.fullName}
+          onChange={handleChange}
+          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Email</label>
+        <input
+          type="email"
+          name="email"
+          value={profileData.email}
+          onChange={handleChange}
+          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Password</label>
+        <input
+          type="password"
+          name="password"
+          value={profileData.password}
+          onChange={handleChange}
+          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+        />
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700">Profile Picture</label>
+        <input
+          type="file"
+          name="profilePicture"
+          onChange={(e) =>
+            setProfileData({ ...profileData, profilePicture: e.target.files[0] })
+          }
+          className="mt-1 block w-full border-gray-300 rounded-md shadow-sm"
+        />
+      </div>
+      <button type="submit" className="btn btn-primary">
+        Save Changes
+      </button>
+    </form>
+  );
+};
 
 const ApiKeysTab = ({ apiKeys, onChange }) => (
   <form className="space-y-4">
-    {["facebook", "twitter", "instagram","Linkedin","Youtube"].map((platform) => (
+    {["facebook", "twitter", "instagram", "linkedin", "youtube"].map((platform) => (
       <div key={platform}>
-        <label className="block text-sm font-medium text-gray-700 capitalize">{platform} API Key</label>
+        <label className="block text-sm font-medium text-gray-700 capitalize">
+          {platform} API Key
+        </label>
         <input
           type="text"
           value={apiKeys[platform]}
@@ -111,7 +199,9 @@ const ApiKeysTab = ({ apiKeys, onChange }) => (
 
 const SubscriptionTab = ({ subscription }) => (
   <div>
-    <h2 className="text-lg font-semibold text-gray-800">Current Plan: {subscription.plan}</h2>
+    <h2 className="text-lg font-semibold text-gray-800">
+      Current Plan: {subscription.plan}
+    </h2>
     <p className="text-gray-600">Renewal Date: {subscription.renewalDate}</p>
     <button className="mt-4 btn btn-primary">Manage Subscription</button>
     <button className="ml-4 btn btn-outline">Upgrade Plan</button>

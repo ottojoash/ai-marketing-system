@@ -1,6 +1,7 @@
 const express = require("express");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
+const { protect } = require("../middleware/auth");
 const router = express.Router();
 
 // @route POST /api/register
@@ -50,6 +51,23 @@ router.post("/login", async (req, res) => {
     } else {
       res.status(401).json({ message: "Invalid email or password" });
     }
+  } catch (err) {
+    res.status(500).json({ message: "Server error", error: err.message });
+  }
+});
+
+// @route GET /api/user
+// @desc Get user info (protected route)
+// @access Private
+router.get("/user", protect, async (req, res) => {
+  try {
+    const user = await User.findById(req.user._id).select("-password"); // Exclude password
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    res.status(200).json(user);
   } catch (err) {
     res.status(500).json({ message: "Server error", error: err.message });
   }

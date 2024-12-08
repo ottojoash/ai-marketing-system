@@ -31,8 +31,15 @@ export const register = async (userData) => {
   return response.data;
 };
 
+// Fetch user profile data
 export const getUser = async () => {
-  const response = await api.get('/auth/user');
+  const response = await api.get('/user'); // Adjust this endpoint based on your backend
+  return response.data;
+};
+
+// Update user profile data
+export const updateUser = async (userData) => {
+  const response = await api.put('/user', userData); // Assuming PUT is used for updates
   return response.data;
 };
 
