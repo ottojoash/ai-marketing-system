@@ -120,6 +120,57 @@ router.get("/filter", protect, async (req, res) => {
       res.status(500).json({ message: "Server error", error: err.message });
     }
   });
+
+  // @route GET /api/campaigns/analytics
+// @desc Get campaign analytics
+// @access Private
+router.get("/analytics", protect, async (req, res) => {
+    try {
+      const campaigns = await Campaign.find({ createdBy: req.user._id });
+  
+      const totalCampaigns = campaigns.length;
+      const totalBudget = campaigns.reduce((sum, campaign) => sum + campaign.budget, 0);
+      const campaignsByPlatform = {};
+  
+      campaigns.forEach((campaign) => {
+        campaign.platforms.forEach((platform) => {
+          campaignsByPlatform[platform] = (campaignsByPlatform[platform] || 0) + 1;
+        });
+      });
+  
+      res.status(200).json({
+        totalCampaigns,
+        totalBudget,
+        campaignsByPlatform,
+      });
+    } catch (err) {
+      res.status(500).json({ message: "Server error", error: err.message });
+    }
+  });
+
+  router.put("/:id", protect, async (req, res) => {
+    try {
+      const { id } = req.params;
+      const updates = req.body;
+  
+      const campaign = await Campaign.findById(id);
+  
+      if (!campaign || campaign.createdBy.toString() !== req.user._id.toString()) {
+        return res.status(404).json({ message: "Campaign not found" });
+      }
+  
+      Object.keys(updates).forEach((key) => {
+        campaign[key] = updates[key]; // Apply updates dynamically
+      });
+  
+      const updatedCampaign = await campaign.save();
+      res.status(200).json(updatedCampaign);
+    } catch (err) {
+      res.status(500).json({ message: "Server error", error: err.message });
+    }
+  });
+  
+  
   
 
 module.exports = router;
