@@ -1,19 +1,19 @@
 const multer = require("multer");
 const path = require("path");
 
-// Set storage engine
+// Multer storage settings
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/"); // Uploads folder
+    cb(null, "uploads/");
   },
   filename: (req, file, cb) => {
-    cb(null, `${Date.now()}-${file.originalname}`); // Unique filename
+    cb(null, `${Date.now()}-${file.originalname}`);
   },
 });
 
-// Check file type
+// Multer file filter
 const fileFilter = (req, file, cb) => {
-  const fileTypes = /jpeg|jpg|png|gif/; // Allowed file types
+  const fileTypes = /jpeg|jpg|png|gif/;
   const extname = fileTypes.test(path.extname(file.originalname).toLowerCase());
   const mimetype = fileTypes.test(file.mimetype);
 
@@ -24,10 +24,10 @@ const fileFilter = (req, file, cb) => {
   }
 };
 
-// Initialize upload
+// Multer instance
 const upload = multer({
   storage: storage,
-  limits: { fileSize: 5 * 1024 * 1024 }, // Max file size: 5MB
+  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB max size
   fileFilter: fileFilter,
 });
 
