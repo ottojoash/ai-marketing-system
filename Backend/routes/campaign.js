@@ -9,14 +9,23 @@ const router = express.Router();
 // @access Private
 router.post("/", protect, upload.array("images", 5), async (req, res) => {
     try {
-      console.log("Files uploaded:", req.files); // Debugging: Log req.files
-      if (!req.files || req.files.length === 0) {
-        return res.status(400).json({ message: "No files uploaded" });
+      const { name, description, startDate, endDate, budget } = req.body;
+      let { platforms } = req.body;
+  
+      // Check and convert platforms to an array if it's a string
+      if (typeof platforms === "string") {
+        platforms = platforms.split(",").map((platform) => platform.trim());
       }
   
-      const imagePaths = req.files.map((file) => file.path); // Extract file paths
-      const { name, description, startDate, endDate, budget, platforms } = req.body;
+      // Handle missing fields
+      if (!name || !description || !startDate || !endDate || !budget || !platforms) {
+        return res.status(400).json({ message: "All fields except images are required." });
+      }
   
+      // Check for uploaded files
+      const imagePaths = req.files ? req.files.map((file) => file.path) : [];
+  
+      // Create the campaign
       const campaign = new Campaign({
         name,
         description,
@@ -24,18 +33,17 @@ router.post("/", protect, upload.array("images", 5), async (req, res) => {
         endDate,
         budget,
         platforms,
-        images: imagePaths, // Save image paths
+        images: imagePaths,
         createdBy: req.user._id,
       });
   
       await campaign.save();
       res.status(201).json(campaign);
     } catch (err) {
-      console.error("Error:", err.message); // Debug: Log errors
+      console.error("Error posting campaign:", err.message);
       res.status(500).json({ message: "Server error", error: err.message });
     }
   });
-  
 
 // @route PUT /api/campaigns/:id
 // @desc Update a campaign with image upload
@@ -169,6 +177,37 @@ router.get("/analytics", protect, async (req, res) => {
       res.status(500).json({ message: "Server error", error: err.message });
     }
   });
+
+   // @route Post /api/campaigns/recommendations
+// @desc Post campaign recommendations
+// @access Private
+router.post("/recommendations", protect, async (req, res) => {
+    try {
+      const { goal, budget } = req.body;
+  
+      if (!goal || !budget) {
+        return res.status(400).json({ message: "Goal and budget are required." });
+      }
+  
+      // Example AI-like recommendations
+      const recommendations = [];
+      if (goal.toLowerCase().includes("engagement")) {
+        recommendations.push("Focus on Instagram and TikTok for better engagement.");
+      }
+      if (goal.toLowerCase().includes("sales")) {
+        recommendations.push("Allocate more budget to Google Ads for higher conversion rates.");
+      }
+      if (budget < 1000) {
+        recommendations.push("Consider email marketing or organic social media for cost-efficiency.");
+      }
+  
+      res.status(200).json({ recommendations });
+    } catch (err) {
+      console.error("Error generating recommendations:", err.message);
+      res.status(500).json({ message: "Server error", error: err.message });
+    }
+  });
+  
   
   
   
