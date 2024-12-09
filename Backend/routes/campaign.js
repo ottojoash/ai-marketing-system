@@ -8,28 +8,34 @@ const router = express.Router();
 // @desc Create a new campaign with image upload
 // @access Private
 router.post("/", protect, upload.array("images", 5), async (req, res) => {
-  const { name, description, startDate, endDate, budget, platforms } = req.body;
-
-  try {
-    const imagePaths = req.files.map((file) => file.path); // Get file paths
-
-    const campaign = new Campaign({
-      name,
-      description,
-      startDate,
-      endDate,
-      budget,
-      platforms,
-      images: imagePaths, // Save image paths
-      createdBy: req.user._id, // User creating the campaign
-    });
-
-    await campaign.save();
-    res.status(201).json(campaign);
-  } catch (err) {
-    res.status(500).json({ message: "Server error", error: err.message });
-  }
-});
+    try {
+      console.log("Files uploaded:", req.files); // Debugging: Log req.files
+      if (!req.files || req.files.length === 0) {
+        return res.status(400).json({ message: "No files uploaded" });
+      }
+  
+      const imagePaths = req.files.map((file) => file.path); // Extract file paths
+      const { name, description, startDate, endDate, budget, platforms } = req.body;
+  
+      const campaign = new Campaign({
+        name,
+        description,
+        startDate,
+        endDate,
+        budget,
+        platforms,
+        images: imagePaths, // Save image paths
+        createdBy: req.user._id,
+      });
+  
+      await campaign.save();
+      res.status(201).json(campaign);
+    } catch (err) {
+      console.error("Error:", err.message); // Debug: Log errors
+      res.status(500).json({ message: "Server error", error: err.message });
+    }
+  });
+  
 
 // @route PUT /api/campaigns/:id
 // @desc Update a campaign with image upload
