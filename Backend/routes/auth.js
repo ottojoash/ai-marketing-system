@@ -7,7 +7,7 @@ const router = express.Router();
 // @route POST /api/register
 // @desc Register a new user
 router.post("/register", async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, role } = req.body;
 
   try {
     const userExists = await User.findOne({ email });
@@ -16,14 +16,17 @@ router.post("/register", async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
     }
 
-    const user = await User.create({ name, email, password });
+    const userRole = role || "marketer"; // Default to "marketer" if no role is provided
+
+    const user = await User.create({ name, email, password, role: userRole });
 
     if (user) {
       res.status(201).json({
         _id: user.id,
         name: user.name,
         email: user.email,
-        token: generateToken(user.id),
+        role: user.role, // Include the role in the response
+        token: generateToken(user.id, user.role), // Generate token with role
       });
     } else {
       res.status(400).json({ message: "Invalid user data" });
@@ -46,7 +49,8 @@ router.post("/login", async (req, res) => {
         _id: user.id,
         name: user.name,
         email: user.email,
-        token: generateToken(user.id),
+        role: user.role, // Include role in response
+        token: generateToken(user.id, user.role), // Generate token with role
       });
     } else {
       res.status(401).json({ message: "Invalid email or password" });
@@ -74,8 +78,8 @@ router.get("/user", protect, async (req, res) => {
 });
 
 // Generate JWT Token
-const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, {
+const generateToken = (id, role) => {
+  return jwt.sign({ id, role }, process.env.JWT_SECRET, {
     expiresIn: "30d",
   });
 };
