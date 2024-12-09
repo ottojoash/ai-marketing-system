@@ -207,6 +207,35 @@ router.post("/recommendations", protect, async (req, res) => {
       res.status(500).json({ message: "Server error", error: err.message });
     }
   });
+
+    // @route Post /api/campaigns/predict-performance
+// @desc Post campaign prediction
+// @access Private
+router.post("/predict-performance", protect, async (req, res) => {
+    try {
+      const { budget, platforms, duration } = req.body;
+  
+      if (!budget || !platforms || !duration) {
+        return res.status(400).json({ message: "Budget, platforms, and duration are required." });
+      }
+  
+      // Simple performance prediction logic (placeholder for AI model)
+      const platformFactor = platforms.length * 0.2; // More platforms = higher reach
+      const predictedReach = Math.round(budget * duration * platformFactor);
+  
+      res.status(200).json({
+        budget,
+        platforms,
+        duration,
+        predictedReach,
+        message: "This is an approximate prediction. Refine with more data."
+      });
+    } catch (err) {
+      console.error("Error predicting performance:", err.message);
+      res.status(500).json({ message: "Server error", error: err.message });
+    }
+  });
+  
   
   
   
