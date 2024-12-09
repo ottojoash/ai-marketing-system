@@ -30,6 +30,10 @@ const campaignSchema = new mongoose.Schema({
     type: [String], // e.g., ["Facebook", "Instagram", "Google Ads"]
     default: [],
   },
+  images: {
+    type: [String], // Array of image file paths
+    default: [],
+  },
   createdAt: {
     type: Date,
     default: Date.now,
