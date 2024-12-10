@@ -71,12 +71,14 @@ router.post("/predict", protect, async (req, res) => {
 // Route to fetch all predictions
 router.get("/predictions", protect, async (req, res) => {
     try {
-      const predictions = await Prediction.find(); // You can filter by user if needed
+      // Fetch predictions created by the authenticated user
+      const predictions = await Prediction.find({ createdBy: req.user._id }).sort({ createdAt: -1 });
       res.status(200).json(predictions);
     } catch (err) {
       console.error("Error fetching predictions:", err.message);
       res.status(500).json({ message: "Error fetching predictions." });
     }
   });
+  
 
 module.exports = router;
