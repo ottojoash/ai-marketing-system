@@ -71,14 +71,29 @@ router.post("/predict", protect, async (req, res) => {
 // Route to fetch all predictions
 router.get("/predictions", protect, async (req, res) => {
     try {
-      // Fetch predictions created by the authenticated user
-      const predictions = await Prediction.find({ createdBy: req.user._id }).sort({ createdAt: -1 });
+      // Extract query parameters for filtering
+      const { platform, minBudget, maxBudget, startDate, endDate } = req.query;
+  
+      // Base filter for the authenticated user
+      const filter = { createdBy: req.user._id };
+  
+      // Apply filtering conditions
+      if (platform) filter.platforms = platform; // Match exact platform
+      if (minBudget) filter.budget = { $gte: Number(minBudget) };
+      if (maxBudget) filter.budget = { ...(filter.budget || {}), $lte: Number(maxBudget) };
+      if (startDate) filter.createdAt = { $gte: new Date(startDate) };
+      if (endDate) filter.createdAt = { ...(filter.createdAt || {}), $lte: new Date(endDate) };
+  
+      // Fetch predictions with the filter
+      const predictions = await Prediction.find(filter).sort({ createdAt: -1 });
+  
       res.status(200).json(predictions);
     } catch (err) {
       console.error("Error fetching predictions:", err.message);
-      res.status(500).json({ message: "Error fetching predictions." });
+      res.status(500).json({ message: "Error fetching predictions.", error: err.message });
     }
   });
+  
   
 
 module.exports = router;
