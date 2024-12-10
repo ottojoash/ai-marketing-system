@@ -1,365 +1,102 @@
-Commit for 2023-12-11T06:40:44.586Z
-Commit for 2023-12-12T06:40:44.916Z
-Commit for 2023-12-13T06:40:45.279Z
-Commit for 2023-12-14T06:40:45.565Z
-Commit for 2023-12-15T06:40:46.004Z
-Commit for 2023-12-16T06:40:46.272Z
-Commit for 2023-12-17T06:40:46.726Z
-Commit for 2023-12-18T06:40:47.205Z
-Commit for 2023-12-19T06:40:47.633Z
-Commit for 2023-12-20T06:40:48.049Z
-Commit for 2023-12-21T06:40:48.531Z
-Commit for 2023-12-22T06:40:48.885Z
-Commit for 2023-12-23T06:40:49.205Z
-Commit for 2023-12-24T06:40:49.456Z
-Commit for 2023-12-25T06:40:49.722Z
-Commit for 2023-12-26T06:40:49.990Z
-Commit for 2023-12-27T06:40:50.422Z
-Commit for 2023-12-28T06:40:50.826Z
-Commit for 2023-12-29T06:40:51.211Z
-Commit for 2023-12-30T06:40:51.532Z
-Commit for 2023-12-31T06:40:51.886Z
-Commit for 2024-01-01T06:40:52.243Z
-Commit for 2024-01-02T06:40:52.595Z
-Commit for 2024-01-03T06:40:53.029Z
-Commit for 2024-01-04T06:40:53.376Z
-Commit for 2024-01-05T06:40:53.813Z
-Commit for 2024-01-06T06:40:54.117Z
-Commit for 2024-01-07T06:40:54.415Z
-Commit for 2024-01-08T06:40:54.760Z
-Commit for 2024-01-09T06:40:55.064Z
-Commit for 2024-01-10T06:40:55.377Z
-Commit for 2024-01-11T06:40:55.637Z
-Commit for 2024-01-12T06:40:55.975Z
-Commit for 2024-01-13T06:40:56.278Z
-Commit for 2024-01-14T06:40:56.592Z
-Commit for 2024-01-15T06:40:56.865Z
-Commit for 2024-01-16T06:40:57.192Z
-Commit for 2024-01-17T06:40:57.527Z
-Commit for 2024-01-18T06:40:57.818Z
-Commit for 2024-01-19T06:40:58.120Z
-Commit for 2024-01-20T06:40:58.451Z
-Commit for 2024-01-21T06:40:58.758Z
-Commit for 2024-01-22T06:40:59.010Z
-Commit for 2024-01-23T06:40:59.326Z
-Commit for 2024-01-24T06:40:59.678Z
-Commit for 2024-01-25T06:40:59.992Z
-Commit for 2024-01-26T06:41:00.375Z
-Commit for 2024-01-27T06:41:00.806Z
-Commit for 2024-01-28T06:41:01.091Z
-Commit for 2024-01-29T06:41:01.368Z
-Commit for 2024-01-30T06:41:01.655Z
-Commit for 2024-01-31T06:41:01.964Z
-Commit for 2024-02-01T06:41:02.240Z
-Commit for 2024-02-02T06:41:02.651Z
-Commit for 2024-02-03T06:41:02.969Z
-Commit for 2024-02-04T06:41:03.290Z
-Commit for 2024-02-05T06:41:03.614Z
-Commit for 2024-02-06T06:41:03.998Z
-Commit for 2024-02-07T06:41:04.306Z
-Commit for 2024-02-08T06:41:04.695Z
-Commit for 2024-02-09T06:41:05.017Z
-Commit for 2024-02-10T06:41:05.327Z
-Commit for 2024-02-11T06:41:05.602Z
-Commit for 2024-02-12T06:41:05.950Z
-Commit for 2024-02-13T06:41:06.323Z
-Commit for 2024-02-14T06:41:06.590Z
-Commit for 2024-02-15T06:41:06.921Z
-Commit for 2024-02-16T06:41:07.226Z
-Commit for 2024-02-17T06:41:07.527Z
-Commit for 2024-02-18T06:41:07.826Z
-Commit for 2024-02-19T06:41:08.160Z
-Commit for 2024-02-20T06:41:08.455Z
-Commit for 2024-02-21T06:41:08.823Z
-Commit for 2024-02-22T06:41:09.185Z
-Commit for 2024-02-23T06:41:09.483Z
-Commit for 2024-02-24T06:41:09.823Z
-Commit for 2024-02-25T06:41:10.107Z
-Commit for 2024-02-26T06:41:10.407Z
-Commit for 2024-02-27T06:41:10.719Z
-Commit for 2024-02-28T06:41:11.063Z
-Commit for 2024-02-29T06:41:11.366Z
-Commit for 2024-03-01T06:41:11.652Z
-Commit for 2024-03-02T06:41:11.973Z
-Commit for 2024-03-03T06:41:12.266Z
-Commit for 2024-03-04T06:41:12.581Z
-Commit for 2024-03-05T06:41:12.887Z
-Commit for 2024-03-06T06:41:13.201Z
-Commit for 2024-03-07T06:41:13.562Z
-Commit for 2024-03-08T06:41:13.864Z
-Commit for 2024-03-09T06:41:14.190Z
-Commit for 2024-03-10T06:41:14.514Z
-Commit for 2024-03-11T06:41:14.791Z
-Commit for 2024-03-12T06:41:15.118Z
-Commit for 2024-03-13T06:41:15.455Z
-Commit for 2024-03-14T06:41:15.757Z
-Commit for 2024-03-15T06:41:16.059Z
-Commit for 2024-03-16T06:41:16.326Z
-Commit for 2024-03-17T06:41:16.662Z
-Commit for 2024-03-18T06:41:16.927Z
-Commit for 2024-03-19T06:41:17.198Z
-Commit for 2024-03-20T06:41:17.448Z
-Commit for 2024-03-21T06:41:17.777Z
-Commit for 2024-03-22T06:41:18.110Z
-Commit for 2024-03-23T06:41:18.458Z
-Commit for 2024-03-24T06:41:18.816Z
-Commit for 2024-03-25T06:41:19.101Z
-Commit for 2024-03-26T06:41:19.399Z
-Commit for 2024-03-27T06:41:19.718Z
-Commit for 2024-03-28T06:41:20.011Z
-Commit for 2024-03-29T06:41:20.343Z
-Commit for 2024-03-30T06:41:20.660Z
-Commit for 2024-03-31T06:41:20.967Z
-Commit for 2024-04-01T06:41:21.280Z
-Commit for 2024-04-02T06:41:21.522Z
-Commit for 2024-04-03T06:41:21.819Z
-Commit for 2024-04-04T06:41:22.177Z
-Commit for 2024-04-05T06:41:22.530Z
-Commit for 2024-04-06T06:41:22.946Z
-Commit for 2024-04-07T06:41:23.275Z
-Commit for 2024-04-08T06:41:23.537Z
-Commit for 2024-04-09T06:41:23.813Z
-Commit for 2024-04-10T06:41:24.177Z
-Commit for 2024-04-11T06:41:24.489Z
-Commit for 2024-04-12T06:41:24.780Z
-Commit for 2024-04-13T06:41:25.144Z
-Commit for 2024-04-14T06:41:25.491Z
-Commit for 2024-04-15T06:41:25.865Z
-Commit for 2024-04-16T06:41:26.198Z
-Commit for 2024-04-17T06:41:26.510Z
-Commit for 2024-04-18T06:41:26.868Z
-Commit for 2024-04-19T06:41:27.185Z
-Commit for 2024-04-20T06:41:27.469Z
-Commit for 2024-04-21T06:41:27.864Z
-Commit for 2024-04-22T06:41:28.143Z
-Commit for 2024-04-23T06:41:28.498Z
-Commit for 2024-04-24T06:41:28.856Z
-Commit for 2024-04-25T06:41:29.176Z
-Commit for 2024-04-26T06:41:29.529Z
-Commit for 2024-04-27T06:41:29.901Z
-Commit for 2024-04-28T06:41:30.267Z
-Commit for 2024-04-29T06:41:30.544Z
-Commit for 2024-04-30T06:41:30.901Z
-Commit for 2024-05-01T06:41:31.270Z
-Commit for 2024-05-02T06:41:31.542Z
-Commit for 2024-05-03T06:41:31.952Z
-Commit for 2024-05-04T06:41:32.357Z
-Commit for 2024-05-05T06:41:32.645Z
-Commit for 2024-05-06T06:41:32.930Z
-Commit for 2024-05-07T06:41:33.243Z
-Commit for 2024-05-08T06:41:33.572Z
-Commit for 2024-05-09T06:41:33.858Z
-Commit for 2024-05-10T06:41:34.143Z
-Commit for 2024-05-11T06:41:34.450Z
-Commit for 2024-05-12T06:41:34.773Z
-Commit for 2024-05-13T06:41:35.062Z
-Commit for 2024-05-14T06:41:35.441Z
-Commit for 2024-05-15T06:41:35.734Z
-Commit for 2024-05-16T06:41:36.038Z
-Commit for 2024-05-17T06:41:36.311Z
-Commit for 2024-05-18T06:41:36.590Z
-Commit for 2024-05-19T06:41:36.923Z
-Commit for 2024-05-20T06:41:37.268Z
-Commit for 2024-05-21T06:41:37.659Z
-Commit for 2024-05-22T06:41:37.907Z
-Commit for 2024-05-23T06:41:38.224Z
-Commit for 2024-05-24T06:41:38.524Z
-Commit for 2024-05-25T06:41:38.852Z
-Commit for 2024-05-26T06:41:39.257Z
-Commit for 2024-05-27T06:41:39.526Z
-Commit for 2024-05-28T06:41:39.879Z
-Commit for 2024-05-29T06:41:40.251Z
-Commit for 2024-05-30T06:41:40.640Z
-Commit for 2024-05-31T06:41:40.948Z
-Commit for 2024-06-01T06:41:41.262Z
-Commit for 2024-06-02T06:41:41.550Z
-Commit for 2024-06-03T06:41:41.849Z
-Commit for 2024-06-04T06:41:42.238Z
-Commit for 2024-06-05T06:41:42.569Z
-Commit for 2024-06-06T06:41:42.910Z
-Commit for 2024-06-07T06:41:43.255Z
-Commit for 2024-06-08T06:41:43.530Z
-Commit for 2024-06-09T06:41:43.830Z
-Commit for 2024-06-10T06:41:44.092Z
-Commit for 2024-06-11T06:41:44.437Z
-Commit for 2024-06-12T06:41:44.688Z
-Commit for 2024-06-13T06:41:45.017Z
-Commit for 2024-06-14T06:41:45.344Z
-Commit for 2024-06-15T06:41:45.678Z
-Commit for 2024-06-16T06:41:45.997Z
-Commit for 2024-06-17T06:41:46.282Z
-Commit for 2024-06-18T06:41:46.644Z
-Commit for 2024-06-19T06:41:46.928Z
-Commit for 2024-06-20T06:41:47.274Z
-Commit for 2024-06-21T06:41:47.600Z
-Commit for 2024-06-22T06:41:47.915Z
-Commit for 2024-06-23T06:41:48.206Z
-Commit for 2024-06-24T06:41:48.490Z
-Commit for 2024-06-25T06:41:48.835Z
-Commit for 2024-06-26T06:41:49.249Z
-Commit for 2024-06-27T06:41:49.583Z
-Commit for 2024-06-28T06:41:49.878Z
-Commit for 2024-06-29T06:41:50.171Z
-Commit for 2024-06-30T06:41:50.480Z
-Commit for 2024-07-01T06:41:50.834Z
-Commit for 2024-07-02T06:41:51.134Z
-Commit for 2024-07-03T06:41:51.475Z
-Commit for 2024-07-04T06:41:51.800Z
-Commit for 2024-07-05T06:41:52.060Z
-Commit for 2024-07-06T06:41:52.327Z
-Commit for 2024-07-07T06:41:52.650Z
-Commit for 2024-07-08T06:41:52.933Z
-Commit for 2024-07-09T06:41:53.301Z
-Commit for 2024-07-10T06:41:53.659Z
-Commit for 2024-07-11T06:41:53.962Z
-Commit for 2024-07-12T06:41:54.383Z
-Commit for 2024-07-13T06:41:54.703Z
-Commit for 2024-07-14T06:41:55.014Z
-Commit for 2024-07-15T06:41:55.421Z
-Commit for 2024-07-16T06:41:55.845Z
-Commit for 2024-07-17T06:41:56.159Z
-Commit for 2024-07-18T06:41:56.498Z
-Commit for 2024-07-19T06:41:56.820Z
-Commit for 2024-07-20T06:41:57.079Z
-Commit for 2024-07-21T06:41:57.327Z
-Commit for 2024-07-22T06:41:57.638Z
-Commit for 2024-07-23T06:41:57.967Z
-Commit for 2024-07-24T06:41:58.307Z
-Commit for 2024-07-25T06:41:58.624Z
-Commit for 2024-07-26T06:41:58.927Z
-Commit for 2024-07-27T06:41:59.275Z
-Commit for 2024-07-28T06:41:59.520Z
-Commit for 2024-07-29T06:41:59.836Z
-Commit for 2024-07-30T06:42:00.271Z
-Commit for 2024-07-31T06:42:00.575Z
-Commit for 2024-08-01T06:42:00.927Z
-Commit for 2024-08-02T06:42:01.248Z
-Commit for 2024-08-03T06:42:01.557Z
-Commit for 2024-08-04T06:42:01.878Z
-Commit for 2024-08-05T06:42:02.247Z
-Commit for 2024-08-06T06:42:02.528Z
-Commit for 2024-08-07T06:42:02.820Z
-Commit for 2024-08-08T06:42:03.181Z
-Commit for 2024-08-09T06:42:03.487Z
-Commit for 2024-08-10T06:42:03.813Z
-Commit for 2024-08-11T06:42:04.169Z
-Commit for 2024-08-12T06:42:04.529Z
-Commit for 2024-08-13T06:42:04.846Z
-Commit for 2024-08-14T06:42:05.261Z
-Commit for 2024-08-15T06:42:05.608Z
-Commit for 2024-08-16T06:42:05.910Z
-Commit for 2024-08-17T06:42:06.196Z
-Commit for 2024-08-18T06:42:06.616Z
-Commit for 2024-08-19T06:42:06.958Z
-Commit for 2024-08-20T06:42:07.287Z
-Commit for 2024-08-21T06:42:07.623Z
-Commit for 2024-08-22T06:42:07.944Z
-Commit for 2024-08-23T06:42:08.250Z
-Commit for 2024-08-24T06:42:08.547Z
-Commit for 2024-08-25T06:42:08.882Z
-Commit for 2024-08-26T06:42:09.192Z
-Commit for 2024-08-27T06:42:09.537Z
-Commit for 2024-08-28T06:42:09.860Z
-Commit for 2024-08-29T06:42:10.137Z
-Commit for 2024-08-30T06:42:10.410Z
-Commit for 2024-08-31T06:42:10.772Z
-Commit for 2024-09-01T06:42:11.160Z
-Commit for 2024-09-02T06:42:11.640Z
-Commit for 2024-09-03T06:42:12.066Z
-Commit for 2024-09-04T06:42:12.479Z
-Commit for 2024-09-05T06:42:12.867Z
-Commit for 2024-09-06T06:42:13.308Z
-Commit for 2024-09-07T06:42:13.633Z
-Commit for 2024-09-08T06:42:13.989Z
-Commit for 2024-09-09T06:42:14.289Z
-Commit for 2024-09-10T06:42:14.562Z
-Commit for 2024-09-11T06:42:14.880Z
-Commit for 2024-09-12T06:42:15.204Z
-Commit for 2024-09-13T06:42:15.618Z
-Commit for 2024-09-14T06:42:15.914Z
-Commit for 2024-09-15T06:42:16.201Z
-Commit for 2024-09-16T06:42:16.549Z
-Commit for 2024-09-17T06:42:16.856Z
-Commit for 2024-09-18T06:42:17.188Z
-Commit for 2024-09-19T06:42:17.442Z
-Commit for 2024-09-20T06:42:17.818Z
-Commit for 2024-09-21T06:42:18.146Z
-Commit for 2024-09-22T06:42:18.501Z
-Commit for 2024-09-23T06:42:18.790Z
-Commit for 2024-09-24T06:42:19.109Z
-Commit for 2024-09-25T06:42:19.411Z
-Commit for 2024-09-26T06:42:19.763Z
-Commit for 2024-09-27T06:42:20.126Z
-Commit for 2024-09-28T06:42:20.451Z
-Commit for 2024-09-29T06:42:20.775Z
-Commit for 2024-09-30T06:42:21.094Z
-Commit for 2024-10-01T06:42:21.447Z
-Commit for 2024-10-02T06:42:21.766Z
-Commit for 2024-10-03T06:42:22.034Z
-Commit for 2024-10-04T06:42:22.321Z
-Commit for 2024-10-05T06:42:22.629Z
-Commit for 2024-10-06T06:42:22.995Z
-Commit for 2024-10-07T06:42:23.298Z
-Commit for 2024-10-08T06:42:23.587Z
-Commit for 2024-10-09T06:42:23.879Z
-Commit for 2024-10-10T06:42:24.176Z
-Commit for 2024-10-11T06:42:24.483Z
-Commit for 2024-10-12T06:42:24.839Z
-Commit for 2024-10-13T06:42:25.180Z
-Commit for 2024-10-14T06:42:25.556Z
-Commit for 2024-10-15T06:42:25.923Z
-Commit for 2024-10-16T06:42:26.271Z
-Commit for 2024-10-17T06:42:26.517Z
-Commit for 2024-10-18T06:42:26.906Z
-Commit for 2024-10-19T06:42:27.336Z
-Commit for 2024-10-20T06:42:27.730Z
-Commit for 2024-10-21T06:42:28.017Z
-Commit for 2024-10-22T06:42:28.313Z
-Commit for 2024-10-23T06:42:28.625Z
-Commit for 2024-10-24T06:42:28.950Z
-Commit for 2024-10-25T06:42:29.289Z
-Commit for 2024-10-26T06:42:29.609Z
-Commit for 2024-10-27T06:42:29.940Z
-Commit for 2024-10-28T06:42:30.251Z
-Commit for 2024-10-29T06:42:30.504Z
-Commit for 2024-10-30T06:42:30.823Z
-Commit for 2024-10-31T06:42:31.129Z
-Commit for 2024-11-01T06:42:31.479Z
-Commit for 2024-11-02T06:42:31.818Z
-Commit for 2024-11-03T06:42:32.134Z
-Commit for 2024-11-04T06:42:32.444Z
-Commit for 2024-11-05T06:42:32.722Z
-Commit for 2024-11-06T06:42:33.025Z
-Commit for 2024-11-07T06:42:33.467Z
-Commit for 2024-11-08T06:42:33.829Z
-Commit for 2024-11-09T06:42:34.166Z
-Commit for 2024-11-10T06:42:34.459Z
-Commit for 2024-11-11T06:42:34.764Z
-Commit for 2024-11-12T06:42:35.071Z
-Commit for 2024-11-13T06:42:35.329Z
-Commit for 2024-11-14T06:42:35.611Z
-Commit for 2024-11-15T06:42:35.935Z
-Commit for 2024-11-16T06:42:36.232Z
-Commit for 2024-11-17T06:42:36.539Z
-Commit for 2024-11-18T06:42:36.833Z
-Commit for 2024-11-19T06:42:37.114Z
-Commit for 2024-11-20T06:42:37.473Z
-Commit for 2024-11-21T06:42:37.780Z
-Commit for 2024-11-22T06:42:38.096Z
-Commit for 2024-11-23T06:42:38.445Z
-Commit for 2024-11-24T06:42:38.780Z
-Commit for 2024-11-25T06:42:39.082Z
-Commit for 2024-11-26T06:42:39.525Z
-Commit for 2024-11-27T06:42:39.907Z
-Commit for 2024-11-28T06:42:40.246Z
-Commit for 2024-11-29T06:42:40.549Z
-Commit for 2024-11-30T06:42:40.902Z
-Commit for 2024-12-01T06:42:41.282Z
-Commit for 2024-12-02T06:42:41.595Z
-Commit for 2024-12-03T06:42:41.914Z
-Commit for 2024-12-04T06:42:42.165Z
-Commit for 2024-12-05T06:42:42.556Z
-Commit for 2024-12-06T06:42:42.873Z
-Commit for 2024-12-07T06:42:43.168Z
-Commit for 2024-12-08T06:42:43.480Z
+Here's a comprehensive README for your project. It includes sections like project overview, installation instructions, usage, features, and more.
 
+Project Name: Dashboard Analytics
+Overview
+Dashboard Analytics is a web application designed to provide detailed insights and reports for businesses, offering analytics on user engagement, customer feedback, and more. With a clean and responsive user interface, this application enables users to manage and view important metrics for performance tracking.
+
+This project is built with React for the frontend and integrates with various data sources to display real-time metrics and detailed reports. Users can view key statistics, interact with different reports, and manage their profile directly from the dashboard.
+
+Features
+User Authentication: Login and signup functionality to secure access.
+Dashboard: Overview of key metrics such as views, likes, comments, etc.
+Analytics: Detailed insights into user engagement, competitor performance, and more.
+Reports: Real-time reports on new likes, comments, customer feedback, and inbox messages.
+Responsive Design: Mobile-friendly design with support for different screen sizes.
+Admin Controls: Option to manage settings and strategy-building features.
+Tech Stack
+Frontend:
+
+React
+React Router (for routing)
+TailwindCSS (for styling)
+Backend: (If applicable to your full-stack app)
+
+Node.js (Express for API)
+MongoDB (for data storage) -Pyhton (for AI )
+Authentication: JWT (JSON Web Tokens)
+
+Installation
+Prerequisites
+Node.js (v14.x or higher)
+npm (or yarn)
+Steps
+Clone the repository:
+
+git clone https://github.com/ottojoash/ai-marketing-system.git
+cd ai-analytics-system
+Install dependencies:
+
+If you're using npm:
+
+npm install
+Or if you prefer yarn:
+
+yarn install
+Run the application:
+
+After installing dependencies, you can run the application locally:
+
+npm start
+This will start the development server on http://localhost:3000.
+
+Usage
+Login: Enter your credentials to log into the application.
+Dashboard: Once logged in, you will be redirected to the dashboard, where you can see an overview of key metrics.
+Reports: Navigate to the "Reports" section to view detailed reports such as new likes, comments, and customer feedback.
+Analytics: Check out the analytics section to dive deeper into the performance metrics.
+Settings: Customize your settings, strategy, and other configurations from the settings page.
+Folder Structure
+Here’s an overview of the folder structure:
+
+/dashboard-analytics
+│
+├── /public                    # Public assets (images, icons, etc.)
+│
+src/
+├── components/
+│   ├── Dashboard/
+│   │   └── Dashboard.js
+│   ├── StrategyBuilder/
+│   │   └── StrategyBuilder.js
+│   ├── Analytics/
+│   │   └── Analytics.js
+│   ├── CompetitorAnalysis/
+│   │   └── CompetitorAnalysis.js
+│   └── Shared/
+│       ├── Navbar.js
+│       ├── Footer.js
+│       └── Chart.js
+├── pages/
+│   ├── Login.js
+│   ├── Signup.js
+│   └── Settings.js
+├── App.js
+└── index.js
+│
+├── package.json               # Project metadata and scripts
+└── tailwind.config.js         # TailwindCSS configuration
+Contributing
+We welcome contributions to this project! If you want to help improve the project, please follow these steps:
+
+Fork the repository.
+Create a new branch (git checkout -b feature-name).
+Make your changes and commit them (git commit -m 'Add new feature').
+Push to your forked repository (git push origin feature-name).
+Create a pull request to the main repository.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Acknowledgements
+Thanks to TailwindCSS for an amazing utility-first CSS framework.
+Thanks to React for providing a great library to build the UI.
+Thanks to Node.js and Express for building the backend API.
