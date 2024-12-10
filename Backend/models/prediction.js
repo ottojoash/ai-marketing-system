@@ -6,6 +6,7 @@ const predictionSchema = new mongoose.Schema({
   duration: { type: Number, required: true },
   audience: { type: String, default: "General" },
   analytics: { type: String, required: true },
+  createdBy: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true }, // Link to user
   createdAt: { type: Date, default: Date.now },
 });
 
