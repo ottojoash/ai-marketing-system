@@ -5,6 +5,7 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/auth");
 const campaignRoutes = require("./routes/campaign");
 const strategyRoutes = require("./routes/strategies");
+const analyticsRoutes = require("./routes/analytics")
 const path = require("path");
 
 
@@ -23,6 +24,7 @@ app.use(require("cors")());
 app.use("/api", authRoutes);
 app.use("/api/campaigns", campaignRoutes); // Add the campaign routes
 app.use("/api/strategies", strategyRoutes); 
+app.use("/api/analytics", analyticsRoutes);
 app.use("/uploads", express.static(path.join(__dirname, "/uploads")));
 
 
