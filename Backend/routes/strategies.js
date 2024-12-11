@@ -1,6 +1,7 @@
 const express = require("express");
 const { protect } = require("../middleware/auth");
 const Strategy = require("../models/strategy");
+const { generateStrategy } = require("../helpers/ai");
 const router = express.Router();
 
 // Create a new strategy
@@ -100,7 +101,26 @@ router.get("/templates", protect, async (req, res) => {
       res.status(500).json({ message: "Server error", error: err.message });
     }
   });
-  
-  
+
+
+// AI-powered strategy generation
+router.post("/ai-generate", protect, async (req, res) => {
+  const { goal, audience, budget } = req.body;
+
+  if (!goal || !audience || !budget) {
+    return res.status(400).json({ message: "Goal, audience, and budget are required." });
+  }
+
+  try {
+    const strategy = await generateStrategy(goal, audience, budget);
+    res.status(200).json({ strategy });
+  } catch (err) {
+    console.error("Error generating strategy:", err.message);
+    res.status(500).json({ message: "Server error during AI generation." });
+  }
+});
 
 module.exports = router;
+
+  
+  
