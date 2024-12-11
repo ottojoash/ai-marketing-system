@@ -74,6 +74,61 @@ export const submitPrediction = async (predictionData) => {
   }
 };
 
+// Fetch all strategies for the logged-in user
+export const fetchStrategies = async () => {
+  try {
+    const { data } = await axios.get(API_BASE_URL, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    });
+    return data;
+  } catch (error) {
+    console.error("Error fetching strategies:", error.response?.data || error.message);
+    throw error.response?.data || { message: "Failed to fetch strategies" };
+  }
+};
+
+// Create a new strategy
+export const createStrategy = async (strategyData) => {
+  try {
+    const { data } = await axios.post(API_BASE_URL, strategyData, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    });
+    return data;
+  } catch (error) {
+    console.error("Error creating strategy:", error.response?.data || error.message);
+    throw error.response?.data || { message: "Failed to create strategy" };
+  }
+};
+
+// Generate AI-based strategy suggestions
+export const generateStrategySuggestions = async (goal, audience, budget) => {
+  try {
+    const { data } = await axios.post(
+      `${API_BASE_URL}/suggest`,
+      { goal, audience, budget },
+      {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      }
+    );
+    return data;
+  } catch (error) {
+    console.error("Error generating strategy suggestions:", error.response?.data || error.message);
+    throw error.response?.data || { message: "Failed to generate suggestions" };
+  }
+};
+
+// Fetch predefined templates
+export const fetchTemplates = async () => {
+  try {
+    const { data } = await axios.get(`${API_BASE_URL}/templates`, {
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    });
+    return data;
+  } catch (error) {
+    console.error("Error fetching templates:", error.response?.data || error.message);
+    throw error.response?.data || { message: "Failed to fetch templates" };
+  }
+};
 
 
 // Export the API instance for general use
