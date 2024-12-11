@@ -4,7 +4,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Layout from "./components/Shared/Layout"; // Import Layout
 import Dashboard from "./components/Dashboard/Dashboard";
-import Analytics from "./components/Analytics/Analytics";
+import Analytics from "./pages/Analytics";
 import CompetitorAnalytics from "./components/CompetitorAnalysis/CompetitorAnalysis";
 import StrategyBuilder from "./components/StrategyBuilder/StrategyBuilder";
 import Settings from "./pages/Settings";

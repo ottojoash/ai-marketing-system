@@ -26,8 +26,8 @@ export const login = async (formData) => {
   return response.data;
 };
 
-export const register = async (userData) => {
-  const response = await api.post('/register', userData);
+export const registerUser = async (formData) => {
+  const response = await api.post('/register', formData);
   return response.data;
 };
 
@@ -42,6 +42,39 @@ export const updateUser = async (userData) => {
   const response = await api.put('/user', userData); // Assuming PUT is used for updates
   return response.data;
 };
+
+// Fetch predictions with optional filters
+export const fetchPredictions = async (filters = {}) => {
+  try {
+    const { data } = await axios.get(`${API_BASE_URL}/analytics/predictions`, {
+      params: filters,
+      headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+    });
+    return data;
+  } catch (error) {
+    console.error("Error fetching predictions:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
+// Submit a new prediction request
+export const submitPrediction = async (predictionData) => {
+  try {
+    const { data } = await axios.post(
+      `${API_BASE_URL}/analytics/predict`,
+      predictionData,
+      {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
+      }
+    );
+    return data;
+  } catch (error) {
+    console.error("Error submitting prediction:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
+
 
 // Export the API instance for general use
 export default api;
